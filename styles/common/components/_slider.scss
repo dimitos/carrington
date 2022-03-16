@@ -1,0 +1,95 @@
+.slider-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.slider-nav__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background .3s ease;
+}
+.slider-btn__icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    fill: var(--white);
+    transition: fill .3s ease;
+}
+
+//-------- btn-dark ---------//
+.slider-nav__btn_dark {
+    background: var(--black);
+}
+.slider-nav__btn_dark.slider-nav__btn:hover {
+    background: var(--color6);
+}
+.slider-nav__btn_dark .slider-btn__icon {
+    fill: var(--white);
+}
+
+//-------- btn-light ---------//
+.slider-nav__btn_light {
+    background: var(--white);
+}
+.slider-nav__btn_light.slider-nav__btn:hover {
+    background: var(--color6);
+}
+.slider-nav__btn_light .slider-btn__icon {
+    fill: var(--black);
+}
+
+//-------- btn-disabled ---------//
+.swiper-button-disabled {
+    background: #8d93a0;
+}
+.swiper-button-disabled .slider-btn__icon {
+    fill: #d3d3d3;
+}
+.slider-nav__btn_dark.swiper-button-disabled:hover,
+.slider-nav__btn_light.swiper-button-disabled:hover {
+    background: #8d93a0;
+    cursor: initial;
+}
+.slider-nav__btn_dark.swiper-button-disabled .slider-btn__icon:hover,
+.slider-nav__btn_light.swiper-button-disabled .slider-btn__icon:hover {
+    fill: #d3d3d3;
+}
+
+//-------- pagination ---------//
+.slider-pagination {
+    padding: 0 23px;
+}
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+.swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    opacity: 0.2;
+    transition: background, opacity .3s ease;
+}
+.swiper-pagination-bullet:hover {
+    opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.swiper-pagination-bullet-active:hover {
+    opacity: 1
+}
+.slider-pagination_dark .swiper-pagination-bullet {
+    background: var(--black);
+}
+.slider-pagination_light .swiper-pagination-bullet {
+    background: var(--white);
+}
+

@@ -1,0 +1,39 @@
+.object-video {
+    padding: 30px 0 30px;
+    @include to-desktop {
+        padding: 40px 0 40px;
+    }
+}
+.video-container {
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.object-video__video {
+    min-height: 380px;
+    height: 47.5vw;
+    @include from-desktop {
+        height: 570px;
+    }
+}
+.object-video__video .video-poster__btn {
+    top: 50%;
+    left: 50%;
+    width: 81px;
+    height: 81px;
+    fill: #FFF6F6;
+    transform: translate(-50%, -50%);
+    transition: fill .3s ease;
+}
+.object-video__video .video-poster__btn:hover {
+    fill: var(--black);
+}
+.object-video__video .video-track {
+    display: none;
+}
+.video-slider .slider-nav {
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+}

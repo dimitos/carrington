@@ -1,0 +1,31 @@
+.title__section {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-large-maxi);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    @include to-desktop {
+        font-size: var(--font-size-huge);
+    }
+}
+.title__block {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-large-mini);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    @include to-desktop {
+        font-size: var(--font-size-large-semi);
+    }
+}
+.title__block2 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 30px;
+    line-height: var(--line-height);
+    letter-spacing: -0.015em;
+    @include from-mobile {
+        font-size: 38px;
+    }
+    @include to-desktop {
+        font-size: 48px;
+    }
+}

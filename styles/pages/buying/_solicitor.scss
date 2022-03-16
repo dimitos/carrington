@@ -1,0 +1,114 @@
+.solicitor {
+    padding: 30px 0 4px;
+    @include to-desktop {
+        padding: 40px 0 54px;
+    }
+}
+.solicitor__title {
+    margin-bottom: 20px;
+    color: var(--white);
+    text-transform: uppercase;
+    @include from-mobile {
+        text-align: center;
+    }
+}
+.solicitor__inner {
+    display: flex;
+    flex-wrap: wrap;
+    @include from-mobile {
+        margin: 0 -7px;
+    }
+    @include to-desktop {
+        margin: 0 -13px;
+    }
+}
+.solicitor__item {
+        margin-bottom: 26px;
+    @include from-mobile {
+        padding: 0 7px;
+        width: calc(50%);
+    }
+    @include to-desktop {
+        padding: 0 13px;
+        width: calc(50%);
+    }
+}
+.solicitor__item-wrap {
+    position: relative;
+    height: 328px;
+    overflow: hidden;
+    transition: height .3s ease;
+    background: var(--white);
+}
+.solicitor__item-wrap::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 138px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 77.4%);
+    transition: opacity .3s ease;
+    opacity: 1;
+    z-index: 0;
+}
+.open.solicitor__item-wrap::before {
+    opacity: 0;
+}
+.solicitor__btn {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+.solicitor__btn-text {
+    margin-bottom: -12px;
+    font-size: var(--font-size-medium-mini);
+    transition: color .3s ease;
+    pointer-events: none;
+}
+.solicitor__btn:hover .solicitor__btn-text {
+    color: var(--color6);
+}
+.solicitor__btn-icon {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    fill: var(--black);
+    transition: fill .3s ease;
+    pointer-events: none;
+}
+.solicitor__btn:hover .solicitor__btn-icon {
+    fill: var(--color6);
+}
+.solicitor__btn-icon-up {
+    display: none;
+}
+.solicitor__btn-hide {
+    display: none;
+}
+.solicitor__item-title {
+    padding: 0 10px 0;
+    font-weight: 600;
+}
+.solicitor__item-text {
+    padding: 15px 10px 55px 10px;
+    color: #000000;
+}
+.solicitor__text {
+    max-width: 606px;
+    margin-bottom: 30px;
+    line-height: 140%;
+    color: var(--white);
+    @include from-mobile {
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+}
+.solicitor__item-image {
+    width: 100%;
+    height: 164px;
+    margin-bottom: 15px;
+}

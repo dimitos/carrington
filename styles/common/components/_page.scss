@@ -1,0 +1,39 @@
+.page {
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.page-fa .lang-fa {
+    text-align: right;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+.page__body {
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-medium-maxi);
+    line-height: var(--line-height);
+    font-weight: var(--font-weight-normal);
+    font-style: normal;
+    color: var(--black);
+    background-color: var(--color1);
+}
+.page__modals {
+    display: none;
+}
+.page__main_home .get-more {
+    position: relative;
+    padding: 60px 0 140px;
+    @include from-mobile {
+        padding: 65px 0 160px;
+    }
+    @include to-desktop {
+        padding: 75px 0 190px;
+    }
+    @include from-desktop {
+        padding: 80px 0 228px;
+    }
+}
+.page__main {
+    position: relative;
+    overflow: hidden;
+}

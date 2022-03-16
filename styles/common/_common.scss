@@ -1,0 +1,177 @@
+html {
+    //scroll-behavior: smooth;
+    min-width: $html-min-width;
+    max-width: $html-max-width;
+}
+.container {
+    position: relative;
+    max-width: calc(var(--container) + var(--html-mobile-edge-offset) * 2);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 var(--html-mobile-edge-offset);
+}
+img {
+    vertical-align: top;
+    max-width: 100%;
+    border-style: none;
+    transform: translate3d(0px, 0px, .001px);
+}
+a, button {
+    transition: color .3s ease;
+
+}
+::placeholder {
+    color: var(--black);
+}
+input[placeholder]          {text-overflow:ellipsis}
+input::-moz-placeholder     {text-overflow:ellipsis}
+input:-moz-placeholder      {text-overflow:ellipsis}
+input:-ms-input-placeholder {text-overflow:ellipsis}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+::selection {
+    background: var(--black);
+    text-shadow: none;
+}
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently  not supported by any browser */
+}
+.section__simple {
+    overflow: hidden;
+    padding-bottom: 60px;
+    @include to-desktop {
+        padding-bottom: 70px;
+    }
+    @include from-desktop {
+        padding-bottom: 80px;
+    }
+}
+.bg-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.ellipse {
+    position: absolute;
+    filter: blur(250px);
+    opacity: 0.3;
+    border-radius: 50%;
+}
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+.no-wrap {
+    white-space: nowrap;
+}
+.image-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.image {
+    image-rendering: crisp-edges; // safari
+    image-rendering: -moz-crisp-edges; // fire fox
+    image-rendering: -webkit-optimize-contrast; // chrom
+    -ms-interpolation-mode: nearest-neighbor; // IE
+    &__fit {
+        height: 100%;
+        width: 100%;
+    }
+    &__fit_contain {
+        object-fit: contain;
+    }
+    &__fit_cover {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__fit_fill {
+        object-fit: fill;
+    }
+    &__wrapper{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+}
+.video {
+    position: relative;
+    & .video-track {
+        width: 100%;
+        height: 100%;
+        &__fit_cover {
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    & .video-poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    & .video-poster__wrapper {
+        position: relative;
+    }
+    & .video-poster__wrapper,
+    & .video-poster__image,
+    & .video-poster__icon {
+        width: 100%;
+        height: 100%;
+    }
+    & .video-poster__btn {
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+    }
+}
+::-webkit-scrollbar {
+    background-color: var(--color1);
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    @include to-desktop {
+        height: 10px;
+        width: 10px;
+        border-radius: 10px;
+    }
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color2);
+    @include to-desktop {
+        border-radius: 10px;
+    }
+}
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    @include to-desktop {
+        border-radius: 10px;
+    }
+}

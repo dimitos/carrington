@@ -1,0 +1,56 @@
+.btn-pageUp {
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+    z-index: 100;
+    pointer-events: none;
+    &.active {
+        pointer-events: initial;
+    }
+}
+.btn-pageUp__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: var(--black);
+    transform: scale(0);
+    transition: transform, box-shadow, opacity .3s ease;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    border: 1px solid var(--white);
+    @include to-desktop {
+        width: 40px;
+        height: 30px;
+        bottom: 10vh;
+        right: 8vw;
+        box-shadow: none;
+    }
+}
+.btn-pageUp__icon {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    fill: var(--white);
+    @include to-desktop {
+        width: 16px;
+        height: 16px;
+    }
+}
+.btn-pageUp.active .btn-pageUp__wrap {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 2px 2px 5px -1px rgb(0 0 0 / 53%);
+    @include to-desktop {
+        opacity: 0.5;
+    }
+}
+.btn-pageUp:hover .btn-pageUp__wrap {
+    @include to-desktop {
+        box-shadow: 4px 4px 5px -1px rgb(0 0 0 / 53%);
+        opacity: 1;
+    }
+}

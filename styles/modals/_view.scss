@@ -1,0 +1,81 @@
+.view-modal {
+    position: relative;
+    width: 97vw;
+    height: 90vh;
+    max-width: 1120px;
+    min-width: 300px;
+    max-height: 844px;
+    background: var(--white);
+    padding: 30px 15px 20px;
+    @include to-desktop {
+        padding: 50px 20px 30px;
+    }
+    @include from-desktop {
+        padding: 50px 30px 40px;
+    }
+}
+.intopModal-view .arcticmodal-close {
+    top: 2px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    fill: var(--black);
+    @include to-desktop {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+    }
+}
+.intopModal-view .intopModal__close svg {
+    width: 16px;
+    height: 16px;
+    @include to-desktop {
+        width: 27px;
+        height: 27px;
+    }
+}
+.intopModal-view .intopModal__close {
+    padding: 3px;
+}
+.view-modal__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.view-slider {
+    height: 76%;
+    position: relative;
+    @media (max-height: 400px) and (orientation: landscape) {
+        height: 100%;
+    }
+}
+.preview-slider {
+    flex: 1;
+    padding-top: 15px;
+    @include from-desktop {
+        padding-top: 24px;
+    }
+    @media (max-height: 400px) and (orientation: landscape) {
+        display: none;
+    }
+}
+.view-slider .slider-nav {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    justify-content: space-between;
+    @include from-mobile {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+.view__swiper,
+.view-slider__image,
+.preview__swiper,
+.preview-slider__image {
+    height: 100%;
+}

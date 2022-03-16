@@ -1,0 +1,118 @@
+.country {
+    position: relative;
+    padding: 80px 0 50px;
+    @include from-mobile {
+        padding: 90px 0 80px;
+    }
+    @include to-desktop {
+        padding: 100px 0 130px;
+    }
+    @include from-desktop {
+        padding: 114px 0 175px;
+    }
+}
+.country__ellipse {
+    width: 357px;
+    height: 335px;
+    top: 7px;
+    left: 73px;
+    z-index: 3;
+    background: #00707A;
+    opacity: 0.8;
+}
+.country__wrap {
+        position: relative;
+        z-index: 5;
+        max-width: 500px;
+        margin: 0 auto;
+    @include to-desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: none;
+        margin: 0;
+    }
+}
+.country__left {
+    position: relative;
+    margin-top: 50px;
+    @include from-mobile {
+        margin-top: 30px;
+    }
+    @include to-desktop {
+        margin-top: 0;
+        width: 55%;
+    }
+}
+.country__right {
+    @include to-desktop {
+        width: 45%;
+        padding: 20px 0 0 60px;
+    }
+}
+.country__name {
+    position: absolute;
+    bottom: 27%;
+    left: 28%;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height);
+    text-transform: uppercase;
+    color: var(--white);
+    @include to-desktop {
+        font-size: var(--font-size-large-mini);
+        bottom: 35%;
+        left: 23%;
+    }
+    @include from-desktop {
+        bottom: 24%;
+        left: 26%;
+    }
+}
+.country__link-section {
+    margin-top: 20px;
+    text-decoration: none;
+}
+.country__title {
+    margin-bottom: 35px;
+}
+.country__text {
+    & + & {
+        margin-top: 15px;
+    }
+}
+.country__icon-map {
+    width: 100%;
+    min-height: 175px;
+    height: 55vw;
+    @include from-mobile {
+        height: 280px;
+    }
+    @include to-desktop {
+        height: 100%;
+    }
+}
+.country .image-under-text {
+    position: absolute;
+    display: block;
+    bottom: 15%;
+    left: -3%;
+    width: 104%;
+    z-index: 4;
+    opacity: 0.05;
+    @include from-mobile {
+        top: 48%;
+        bottom: auto;
+    }
+    @include to-desktop {
+        top: 8%;
+    }
+    @include from-desktop {
+        top: -5%;
+    }
+}
+.country .image-under-text__tetx {
+    font-family : var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: 270px;
+}

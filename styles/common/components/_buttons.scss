@@ -1,0 +1,42 @@
+.btn-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 10px 10px;
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-heigh);
+    color: var(--white);
+    background: var(--black);
+    cursor: pointer;
+    transition: color, background .2s ease;
+    &:hover {
+        @include to-desktop {
+            background: var(--color2);
+        }
+    }
+    &:hover:active {
+        background: var(--color3);
+    }
+    &.disabled {
+        background: var(--color4);
+        cursor: initial;
+    }
+}
+.btn-default__white-black {
+    color: var(--black);
+    background: var(--white);
+    &:hover {
+        @include to-desktop {
+            background: #e1f1fb;
+        }
+    }
+    &:hover:active {
+        background: #bfe1f6;
+    }
+    &.disabled {
+        color: #d3d3d3;
+        background: #c1c1c1;
+    }
+}

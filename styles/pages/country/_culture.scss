@@ -1,0 +1,51 @@
+.culture {
+    padding: 30px 0 30px;
+    color: var(--white);
+    @include to-desktop {
+        padding: 40px 0 45px;
+    }
+}
+.culture__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    @include from-mobile {
+        font-size: 48px;
+    }
+    @include to-desktop {
+        margin-bottom: 0;
+        font-size: 55px;
+    }
+    @include from-desktop {
+        font-size: 72px;
+    }
+}
+.culture__image {
+    width: 100%;
+    max-width: 480px;
+    height: 291px;
+    @include to-desktop {
+        position: absolute;
+        width: 49.5%;
+        max-width: none;
+        top: 0;
+        right: 4.5%;
+    }
+}
+.page-fa .culture__image {
+    margin-left: auto;
+    @include to-desktop {
+        margin: 0;
+    }
+}
+.culture__text {
+    margin-top: 20px;
+}
+.culture__wrap {
+    @include to-desktop {
+        width: 43%;
+        min-height: 291px;
+    }
+    @include from-desktop {
+        width: 37.2%;
+    }
+}

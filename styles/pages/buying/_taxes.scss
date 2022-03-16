@@ -1,0 +1,125 @@
+.taxes {
+    padding: 40px 0 30px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    @include from-mobile {
+        padding: 60px 0 35px;
+    }
+    @include to-desktop {
+        padding: 80px 0 40px;
+    }
+}
+.taxes__title {
+    max-width: 613px;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-transform: uppercase;
+    @include from-mobile {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    @include to-desktop {
+        margin: 0 auto 20px;
+    }
+}
+.taxes__item {
+    color: var(--white);
+    margin-top: -50px;
+    @include to-desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    & + & {
+        @include to-desktop {
+            margin-top: 80px;
+        }
+    }
+}
+.taxes__item:nth-child(2),
+.taxes__item:nth-child(4) {
+    flex-direction: row-reverse;
+}
+.taxes__right {
+    position: relative;
+    width: 239px;
+    height: 301px;
+    margin: 20px 0 0 0;
+    @include from-mobile {
+        width: 265px;
+        height: 355px;
+        margin: 30px auto 0;
+    }
+    @include to-desktop {
+        width: 352px;
+        height: 409px;
+        margin-top: 100px;
+    }
+}
+.taxes__left {
+    position: relative;
+    padding: 160px 0 0 0;
+    @include from-mobile {
+        padding: 170px 0 0 50px;
+    }
+    @include to-desktop {
+        width: 62%;
+        max-width: 638px;
+        padding: 180px 0 0 92px;
+    }
+}
+.taxes__item-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: 175px;
+    line-height: var(--line-height);
+    opacity: 0.15;
+}
+.taxes__item-title {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: 24px;
+    line-height: var(--line-height);
+    margin-bottom: 20px;
+}
+.taxes__item:nth-child(1) .taxes__left {
+    @include to-desktop {
+        max-width: 492px;
+    }
+}
+.taxes__item:nth-child(1) .taxes__left,
+.taxes__item:nth-child(3) .taxes__left {
+    @include to-desktop {
+        margin-right: 50px;
+    }
+}
+.taxes__item:nth-child(2) .taxes__left,
+.taxes__item:nth-child(4) .taxes__left {
+    @include to-desktop {
+        margin-left: 50px;
+    }
+}
+.taxes__top-text {
+    max-width: 458px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--white);
+    @include from-mobile {
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+    @include to-desktop {
+        margin: 0 auto 40px;
+    }
+}
+.taxes__title {
+    font-size: 28px;
+    @include from-mobile {
+        font-size: var(--font-size-large-maxi);
+    }
+    @include to-desktop {
+        font-size: var(--font-size-huge);
+    }
+}

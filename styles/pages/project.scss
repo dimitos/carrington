@@ -1,0 +1,20 @@
+@import '../setup/mixins';
+@import '../setup/variables';
+
+@import 'styles/pages/project/hero';
+@import 'styles/pages/project/benefit';
+@import 'styles/pages/project/gallery';
+@import 'styles/pages/project/plans';
+@import 'styles/pages/project/video';
+@import 'styles/pages/project/region';
+@import 'styles/common/components/inspection';
+@import 'styles/pages/project/spec';
+@import 'styles/common/components/get-more';
+@import 'styles/common/components/projects';
+@import 'styles/common/components/view-tour';
+
+
+
+@import '../modals/genplan';
+@import '../modals/inspectionTrip';
+@import '../modals/view';

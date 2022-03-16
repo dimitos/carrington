@@ -1,0 +1,18 @@
+.social__list {
+    display: flex;
+    align-items: center;
+}
+.social__item + .social__item{
+    margin-left: 21px;
+}
+.social__link-icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--white);
+    transition: fill .3s ease;
+}
+.social__item:hover .social__link-icon {
+    @include to-desktop {
+        fill: var(--color6);
+    }
+}

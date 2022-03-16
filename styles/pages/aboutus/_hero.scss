@@ -1,0 +1,71 @@
+.page__main_aboutus {
+    background: var(--black);
+}
+.hero {
+    overflow: hidden;
+    position: relative;
+    min-height: 630px;
+    padding: 90px 0 20px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    @include from-mobile {
+        padding: 100px 0 40px;
+    }
+    @include to-desktop {
+        padding: 110px 0 90px;
+        min-height: 648px;
+    }
+    & .breadcrumbs {
+        @include to-desktop {
+            margin-bottom: 25px;
+        }
+    }
+}
+.hero__container {
+    z-index: 2;
+}
+.hero__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.page-fa .hero__inner {
+    align-items: flex-end;
+}
+.hero__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: var(--white);
+    @include from-mobile {
+        margin-bottom: 25px;
+        font-size: 42px;
+    }
+    @include to-desktop {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+}
+.hero__text {
+    max-width: 650px;
+    margin-bottom: 30px;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--white);
+    @include from-mobile {
+        font-size: var(--font-size-medium-maxi);
+    }
+}
+.page-fa .hero__title,
+.page-fa .hero__text {
+    margin-left: inherit !important;
+}
+.hero__buying-btn {
+    width: 200px;
+    @include from-mobile {
+        width: 245px;
+    }
+    @include to-desktop {
+        width: 290px;
+    }
+}

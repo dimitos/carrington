@@ -1,0 +1,98 @@
+.awards-2014 {
+    padding: 0 0 60px 0;
+    color: var(--white);
+    @include to-desktop {
+        padding: 0 0 80px 0;
+    }
+}
+.awards-2014__inner {
+    position: relative;
+    margin-bottom: 20px;
+    @include from-mobile {
+        margin: 0 0 30px;
+    }
+    @include to-desktop {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 40px;
+    }
+}
+.awards-2014__left {
+    @include to-desktop {
+        width: 49%;
+    }
+    @include from-desktop {
+        width: 40%;
+    }
+}
+.awards-2014__right {
+    display: none;
+    @include to-desktop {
+        display: block;
+        position: relative;
+        width: 49%;
+        max-height: 630px;
+    }
+    @include from-desktop {
+        width: 57%;
+        height: 498px;
+    }
+}
+.awards-2014__right-item {
+    @include to-desktop {
+        position: absolute;
+    }
+}
+.awards-2014__img {
+    @include to-desktop {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+.awards-2014__right-item:nth-child(1) {
+    @include to-desktop {
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 458px;
+        height: 300px;
+        z-index: 2;
+    }
+}
+.awards-2014__right-item:nth-child(2) {
+    @include to-desktop {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 530px;
+        height: 336px;
+        z-index: 3;
+    }
+}
+.awards-2014 .image-under-text {
+    position: absolute;
+    display: block;
+    top: -117px;
+    right: 1%;
+    width: 98%;
+    max-width: 850px;
+    height: 239px;
+    z-index: 0;
+    opacity: 0.2;
+    @include to-desktop {
+        top: 44%;
+    }
+}
+.awards-2014 .image-under-text__tetx {
+font-family : var(--font-family-main);
+font-weight: var(--font-weight-semi-bold);
+font-size: 243px;
+}
+.awards-2014 .awards-list {
+    margin-bottom: 10px;
+}
+.awards-2014__text {
+    font-weight: var(--font-weight-semi-bold);
+}

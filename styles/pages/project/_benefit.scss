@@ -1,0 +1,124 @@
+.benefit {
+    position: relative;
+    padding: 40px 0 30px;
+    @include to-desktop {
+        padding: 50px 0 40px;
+    }
+}
+.benefit__ellipse {
+    display: none;
+    @include from-mobile {
+        display: block;
+        width: 284px;
+        height: 267px;
+        top: 35px;
+        left: -47px;
+        z-index: 0;
+        background: #00707A;
+        opacity: 0.9;
+    }
+    @include to-desktop {
+        width: 377px;
+        height: 355px;
+        top: -106px;
+        left: -83px;
+    }
+}
+.benefit__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.benefit__logo {
+    margin: 0 0 20px 0;
+    @include from-mobile {
+        margin: 0 0 30px 0;
+    }
+}
+.benefit__title {
+    margin: 0 0 20px 0;
+    text-align: center;
+    @include from-mobile {
+        margin: 0 0 30px 0;
+    }
+}
+.benefit__text {
+    max-width: 750px;
+    min-height: 100px;
+    text-align: center;
+}
+.benefit__table {
+    width: 100%;
+    max-width: 370px;
+    margin-bottom: 30px;
+    @include from-mobile {
+        width: auto;
+        max-width: none;
+        min-width: 452px;
+        margin-bottom: 40px;
+    }
+}
+.benefit__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0 0 11px;
+    border-bottom: 1px solid var(--black);
+    & + & {
+        margin-top: 30px;
+    }
+    @include from-mobile {
+        padding: 0 15px 11px;
+    }
+}
+.page-fa .benefit__row {
+    flex-direction: row-reverse;
+}
+.benefit__td:first-child {
+    padding-right: 10px;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semi-bold);
+    @include from-mobile {
+        width: 50%;
+        padding-right: 30px;
+        font-size: var(--font-size-medium-maxi);
+    }
+    @include to-desktop {
+        min-width: 235px;
+        padding-right: 50px;
+    }
+}
+.page-fa .benefit__td:first-child {
+    padding-left: 10px;
+    padding-right: 0;
+    @include from-mobile {
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    @include to-desktop {
+        padding-left: 50px;
+        padding-right: 0;
+    }
+}
+.benefit__td:not(:first-child) {
+    font-size: var(--font-size-medium-mini);
+    text-align: right;
+    @include from-mobile {
+        width: 50%;
+        min-width: 170px;
+        padding-right: 15px;
+        font-size: var(--font-size-medium-maxi);
+        text-align: left;
+    }
+}
+.page-fa .benefit__td:not(:first-child) {
+    @include from-mobile {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: right;
+    }
+}

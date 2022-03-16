@@ -1,0 +1,77 @@
+.language {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.language__wrap {
+    position: relative;
+    width: 70px;
+    font-size: var(--font-size-medium-mini);
+    line-height: var(--line-height);
+    transition: width .3s ease;
+}
+.open .language__wrap {
+    width: 125px;
+    background: var(--black);
+}
+.language__top {
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    transition: padding .3s ease;
+}
+.open .language__top {
+    padding: 7px 16px 0;
+    transition: none;
+}
+.open .language__selected {
+    color: var(--white) !important;
+}
+.language__top-icon {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    fill: var(--white);
+    transition: fill, right .3s ease;
+}
+.open .language__top-icon {
+    right: 25px;
+    fill: var(--white) !important;
+}
+.language__top-icon-down,
+.open .language__top-icon-up {
+    opacity: 1;
+}
+.language__top-icon-up,
+.open .language__top-icon-down {
+    opacity: 0;
+}
+.language__list {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    padding: 0 0 20px;
+    font-size: var(--font-size-medium-mini);
+    line-height: var(--line-height);
+    background: var(--black);
+    transition: padding, width .3s ease;
+}
+.open .language__list {
+    display: flex;
+    padding: 0 16px 20px;
+    width: 100%;
+}
+.language__item {
+    margin-top: 7px;
+    color: var(--white);
+    cursor: pointer;
+    pointer-events: initial;
+}
+.language__item.selected {
+    display: none;
+}

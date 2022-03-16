@@ -1,0 +1,44 @@
+:root {
+    /* Sizes */
+    --html-min-width: 321px;
+    --html-max-width: 1920px;
+    --html-mobile-edge-offset: 15px;
+
+    --container: 1080px;
+
+    /* Colors */
+    --white: #ffffff;
+    --black: #13264E;
+    --color1: #bfe1f6;
+    --color2: #1a3266;
+    --color3: #1f3d7b;
+    --color4: #8d93a0;
+    --color5: #000000;
+    --color6: #1b73b9;
+    --color7: #7d6240;
+    --error: #D82E2E;
+    --bg-filter: rgba(24, 24, 24, 0.3);
+
+
+    /* Typography */
+    --font-family-title: "Playfair Display", sans-serif;
+    --font-family-main: "Nunito", sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    // --font-size-small: 10px;
+    --font-size-small-maxi: 12px;
+    --font-size-medium-mini: 14px;
+    --font-size-medium: 16px;
+    --font-size-medium-maxi: 18px;
+    --font-size-large-mini: 20px;
+    --font-size-large-semi: 24px;
+    --font-size-large: 30px;
+    --font-size-large-maxi: 36px;
+    --font-size-huge: 48px;
+    --font-size-giant: 50px;
+
+    --line-height: 140%;
+}

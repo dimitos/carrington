@@ -1,0 +1,86 @@
+.genplan-modal {
+    position: relative;
+    width: 97vw;
+    height: 90vh;
+    max-width: 1600px;
+    padding: 20px 20px;
+    background: var(--white);
+    @include from-mobile {
+        padding: 30px 30px;
+    }
+    @include to-desktop {
+        padding: 45px 35px;
+    }
+}
+.intopModal-genplan .arcticmodal-close {
+    top: 2px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    fill: var(--black);
+    @include to-desktop {
+        top: 9px;
+        right: 9px;
+        width: 39px;
+        height: 39px;
+    }
+}
+.intopModal-genplan .intopModal__close svg {
+    width: 16px;
+    height: 16px;
+    @include to-desktop {
+        width: 27px;
+        height: 27px;
+    }
+}
+.genplan-modal__swiper-slide-wrap {
+    height: 100%;
+}
+.genplan-modal-slider {
+    height: calc(100% - 60px);
+    @media (orientation: landscape) {
+        height: 100%;
+    }
+    @include from-desktop {
+        height: 100%;
+    }
+}
+.genplan-modal__swiper {
+    height: 100%;
+}
+.genplan-modal-slider .slider-nav {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    @media (orientation: landscape) {
+        position: absolute;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin: 0;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        pointer-events: none;
+    }
+    @include from-desktop {
+        position: absolute;
+        justify-content: space-between;
+        padding: 0 30px;
+        margin: 0;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+.genplan-modal-slider .slider-nav__btn {
+    pointer-events: auto;
+}
+.genplan-modal-slider.disabled .swiper-wrapper {
+    transform: translate3d(0px, 0, 0) !important;
+}
+.genplan-modal-slider.disabled .slider-nav {
+    display: none;
+}

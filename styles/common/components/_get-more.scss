@@ -1,0 +1,40 @@
+.get-more {
+    position: relative;
+    padding: 60px 0 120px;
+    @include from-mobile {
+        padding: 65px 0 120px;
+    }
+    @include to-desktop {
+        padding: 75px 0 120px;
+    }
+    @include from-desktop {
+        padding: 80px 0 120px;
+    }
+}
+.get-more__wrap {
+    max-width: 440px;
+}
+.get-more__title {
+    max-width: 416px;
+    margin-bottom: 40px;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large-semi);
+    line-height: var(--line-height);
+    @include to-desktop {
+        margin-bottom: 30px;
+    }
+}
+.get-more__btn {
+    width: 100%;
+    margin-top: 40px;
+    @include to-desktop {
+        margin-top: 50px;
+    }
+}
+.get-more__request .request__input {
+    border-bottom: 1px solid var(--black);
+}
+.get-more__request .request__input::placeholder {
+    opacity: 0.6;
+}

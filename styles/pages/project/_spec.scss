@@ -1,0 +1,144 @@
+.spec {
+    padding: 60px 0 0 0;
+    @include from-mobile {
+        padding: 70px 0 40px;
+    }
+    @include to-desktop {
+        padding: 80px 0 85px;
+    }
+}
+.spec__wrapper {
+    width: 100vw;
+    min-width: 321px;
+    margin: 0 -15px;
+    @include from-mobile {
+        width: auto;
+        margin: 0;
+    }
+    @include to-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.spec__left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include to-desktop {
+        width: 37.4%;
+        min-width: 370px;
+        margin-right: 15px;
+    }
+    @include from-desktop {
+        margin-right: 30px;
+    }
+}
+.spec__right {
+    width: 100%;
+    margin-top: 15px;
+    @include to-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+        flex: 1;
+    }
+}
+.spec__footer-title {
+    line-height: 120%;
+    @include to-desktop {
+        font-size: 42px;
+    }
+}
+.spec__left-content {
+    padding: 55px 15px;
+    margin-bottom: 20px;
+    color: var(--white);
+    background: var(--black);
+    @include to-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 353px;
+        margin-bottom: 0;
+        padding: 8px 30px 18px;
+    }
+}
+.spec__list {
+    margin-top: 15px;
+}
+.spec__list-item {
+    position: relative;
+    padding-left: 25px;
+}
+.spec__list-item::before {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 8px;
+    width: 5px;
+    height: 5px;
+    background: var(--white);
+    border-radius: 50%;
+}
+.page-fa .spec__list-item {
+    padding-left: 0;
+    padding-right: 25px;
+}
+.page-fa .spec__list-item::before {
+    left: 0;
+    right: 8px;
+}
+.spec__left-img {
+    position: relative;
+    height: 55vw;
+    min-height: 319px;
+    @include to-desktop {
+        height: 616px;
+    }
+}
+.spec__right-img {
+    position: relative;
+    height: 50vw;
+    min-height: 180px;
+    & + & {
+        margin-top: 15px;
+        @include to-desktop {
+            margin-top: 20px;
+        }
+    }
+    @include to-desktop {
+        height: calc(100% / 3);
+    }
+}
+.spec__left-text,
+.spec__right-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 275px;
+    min-height: 69px;
+    padding: 9px 16px;
+    color: var(--white);
+    text-align: center;
+    background: var(--black);
+    transform: translateX(-50%);
+    @include to-desktop {
+        transform: initial;
+    }
+}
+.spec__left-text {
+    left: 50%;
+    @include to-desktop {
+        left: 0;
+    }
+}
+.spec__right-text {
+    left: 50%;
+    @include to-desktop {
+        left: auto;
+        right: 0;
+    }
+}

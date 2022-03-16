@@ -1,0 +1,26 @@
+@import './setup/reset';
+@import './setup/variables';
+@import './setup/mixins';
+@import './setup/_custom-properties';
+
+@import './lib/swiper-bundle';
+@import './common/common';
+@import './common/components/page';
+@import './common/components/titles';
+@import './common/components/buttons';
+@import './common/components/breadcrumbs';
+@import './common/components/lang-filter';
+@import './common/components/header';
+@import './common/components/menu';
+@import './common/components/footer';
+@import './common/components/social-links';
+@import './common/components/menu-contacts';
+@import './common/components/slider';
+@import './common/components/link-section';
+@import './common/components/request';
+@import './common/components/btnPageUp';
+
+@import './modals/modal';
+@import './modals/request';
+@import './modals/thanks';
+

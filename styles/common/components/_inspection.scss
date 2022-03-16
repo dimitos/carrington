@@ -1,0 +1,105 @@
+.inspection {
+    position: relative;
+    padding: 160px 0 25px;
+    @include from-mobile {
+        padding: 165px 0 100px;
+    }
+    @include to-desktop {
+        padding: 170px 0 185px;
+    }
+}
+.inspection__ellipse-left {
+    width: 377px;
+    height: 355px;
+    top: -145px;
+    right: auto;
+    left: -84px;
+    z-index: 3;
+    background: #00707A;
+}
+.inspection__ellipse-right {
+    width: 377px;
+    height: 355px;
+    top: 32px;
+    right: 84px;
+    z-index: 2;
+    background: #00707A;
+}
+.inspection__wrap {
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 10px 15px 28px;
+    overflow: hidden;
+    @include from-mobile {
+        padding: 40px 30px 40px 30px;
+    }
+    @include to-desktop {
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        padding: 87px 58px 87px 58px;
+    }
+}
+.inspection__content {
+    max-width: 476px;
+    margin: 0 auto;
+    @include from-desktop {
+        margin: 0;
+    }
+}
+.inspection__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: var(--white);
+    @include from-mobile {
+        font-size: var(--font-size-large-maxi);
+    }
+}
+.inspection__list {
+    margin-bottom: 30px;
+}
+.inspection__list-item {
+    position: relative;
+    color: var(--white);
+    @include from-mobile {
+        padding-left: 27px;
+    }
+}
+.inspection__list-item::before {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: -16px;
+    width: 7px;
+    height: 7px;
+    background: var(--white);
+    border-radius: 50%;
+    @include from-mobile {
+        left: 10px;
+    }
+}
+.page-fa .inspection__list-item {
+    padding-right: 27px;
+    padding-left: 0;
+}
+.page-fa .inspection__list-item::before {
+    left: 0;
+    right: 10px;
+}
+.inspection__buttons {
+    @include from-mobile {
+        display: flex;
+        align-items: center;
+    }
+}
+.inspection__btn {
+    margin: 0 0 20px 0;
+    @include from-mobile {
+        margin: 0 30px 0 0;
+    }
+}
+.inspection__link-section .link-section__link {
+    font-size: var(--font-size-medium-maxi);
+}

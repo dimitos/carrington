@@ -1,0 +1,55 @@
+.contacts-bl {
+    position: relative;
+    padding: 50px 0 25px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    @include to-desktop {
+        padding: 110px 0 25px;
+    }
+}
+.contacts-bl__wrapper {
+    @include to-desktop {
+        display: flex;
+    }
+}
+.contacts-bl__left {
+    padding: 0 0 50px 0;
+    @include to-desktop {
+        width: 40.6%;
+        padding: 0 30px 0 0;
+    }
+}
+.contacts-bl__right {
+    @include to-desktop {
+        width: 59.4%;
+        height: 550px;
+    }
+}
+.contacts-bl__title {
+    margin: 30px 0 36px;
+    color: var(--white);
+}
+.contacts-bl__left .menu-contacts__contact-icon {
+    top: 3px;
+    width: 20px;
+    height: 20px;
+}
+.contacts-bl__left .menu-contacts__contact {
+    padding-left: 30px;
+}
+.contacts-bl__left .menu-contacts__list-item {
+    margin-top: 16px;
+}
+.contacts-bl__left .menu-contacts__contact-text {
+    font-weight: var(--font-weight-semi-bold);
+}
+.contacts-bl .container {
+    z-index: 3;
+}
+#contacts-map {
+    height: 70vw;
+    min-height: 300px;
+    @include to-desktop {
+        height: 100%;
+    }
+}

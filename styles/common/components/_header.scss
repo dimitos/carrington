@@ -1,0 +1,169 @@
+.header__line {
+    position: fixed;
+    padding: 10px 0 0 0;
+    height: 52px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: transparent;
+    transition: height .3s ease;
+    @include to-desktop {
+        height: 69px;
+    }
+}
+.header__bg {
+    background: rgb(191, 225, 246, 0.6);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%);
+}
+.header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__left,
+.header__right {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+    @include to-desktop {
+        padding-bottom: 15px;
+    }
+}
+.header__center {
+    position: absolute;
+    top: 0;
+    left: 47%;
+    padding-top: 6px;
+    transform: translateX(-50%);
+    @include from-mobile {
+        left: 50%;
+    }
+    @include to-desktop {
+        padding-top: 0;
+    }
+}
+.header__logo {
+    display: block;
+}
+.header__logo-link {
+    width: 90px;
+    height: 31px;
+    @include to-desktop {
+        width: 157px;
+        height: 54px;
+    }
+}
+.header__contact {
+    display: none;
+    @include to-desktop {
+        display: flex;
+        align-items: center;
+    }
+}
+.header__dark .header__contact {
+    @include to-desktop {
+        &:hover .header__contact-text {
+            color: var(--white);
+        }
+        &:hover .header__contact-icon {
+            fill: var(--white);
+        }
+    }
+}
+.header__light .header__contact {
+    @include to-desktop {
+        &:hover .header__contact-text {
+            color: var(--black);
+        }
+        &:hover .header__contact-icon {
+            fill: var(--black);
+        }
+    }
+}
+.header__contact-icon {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    transition: fill .3s ease;
+}
+.header__dark .header__contact-icon {
+    fill: var(--black);
+}
+.header__light .header__contact-icon {
+    fill: var(--white);
+}
+.header__contact-text {
+    font-size: var(--font-size-medium-mini);
+    transition: color .3s ease;
+}
+.header__dark .header__contact-text {
+    color: var(--black);
+}
+.header__light .header__contact-text {
+    color: var(--white);
+}
+.header__contact-phone {
+    margin-right: 88px;
+    @include from-desktop {
+        margin-right: 190px;
+    }
+}
+.header__contact-email {
+    margin-left: 18px;
+    @include from-desktop {
+        margin-left: 78px;
+    }
+}
+.header__menu-btn-line {
+    width: 24px;
+    height: 3px;
+    transition: background-color .3s ease;
+    pointer-events: none;
+    & + & {
+        margin-top: 4px;
+    }
+}
+.header__dark .header__menu-btn-line {
+    background-color: var(--black);
+}
+.header__light .header__menu-btn-line {
+    background-color: var(--white);
+}
+.header__menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 35px;
+    cursor: pointer;
+}
+.header__dark .header__menu-btn {
+    @include to-desktop {
+        &:hover .header__menu-btn-line {
+            background-color: var(--white);
+        }
+    }
+}
+.header__light .header__menu-btn {
+    @include to-desktop {
+        &:hover .header__menu-btn-line {
+            background-color: var(--black);
+        }
+    }
+}
+.header__dark .language__selected {
+    color: var(--black);
+}
+.header__light .language__selected {
+    color: var(--white);
+}
+.header__dark .language__top-icon {
+    fill: var(--black);
+}
+.header__light .language__top-icon {
+    fill: var(--white);
+}

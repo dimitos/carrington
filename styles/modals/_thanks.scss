@@ -1,0 +1,41 @@
+.thanks-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 82vh;
+    max-width: 564px;
+    min-width: 300px;
+    max-height: 293px;
+    padding: 40px;
+}
+.intopModal-thanks .arcticmodal-close {
+    top: 16px;
+    right: 16px;
+}
+.thanks-modal__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+.thanks-text {
+    margin-bottom: 10px;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large-semi);
+    line-height: var(--line-height);
+    color: var(--white);
+}
+.thanks-modal__icon {
+    width: 52px;
+    height: 52px;
+    fill: var(--white);
+}
+.thanks-modal__img {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}

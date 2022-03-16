@@ -1,0 +1,175 @@
+.trips-block {
+    position: relative;
+    padding: 80px 0 60px;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity .5s ease;
+    @include from-mobile {
+        padding: 100px 0 90px;
+    }
+    @include to-desktop {
+        padding: 120px 0 130px;
+    }
+    @include from-desktop {
+        padding: 144px 0 164px;
+    }
+    & .breadcrumbs {
+        @include to-desktop {
+            margin: -25px 0 25px;
+        }
+    }
+}
+.trips-block .container {
+    z-index: 3;
+}
+.trips-block__title {
+    max-width: 676px;
+    margin-bottom: 20px;
+}
+.trips-block__text {
+    max-width: 462px;
+    margin-bottom: 60px;
+    font-size: var(--font-size-medium);
+    @include from-mobile {
+        margin-bottom: 80px;
+    }
+    @include to-desktop {
+        margin-bottom: 100px;
+        font-size: var(--font-size-medium-maxi);
+    }
+    @include from-desktop {
+        margin-bottom: 125px;
+    }
+}
+.trips-description {
+    position: relative;
+    & + & {
+        margin-top: 70px;
+        @include from-mobile {
+            margin-top: 120px;
+        }
+        @include to-desktop {
+            margin-top: 180px;
+        }
+        @include from-desktop {
+            margin-top: 230px;
+        }
+    }
+    @include to-desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.trips-description:nth-child(2) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.trips-description:nth-child(3) {
+    justify-content: flex-end;
+}
+.trips-description__item {
+    position: relative;
+}
+.trips-description:nth-child(2) .trips-description__content {
+    @include from-mobile {
+        text-align: right;
+        margin: 0 0 0 auto;
+    }
+    @include to-desktop {
+        margin: 0 30px 0 0;
+        text-align: left;
+    }
+}
+.trips-description:nth-child(1) .trips-description__img,
+.trips-description:nth-child(3) .trips-description__img {
+    @include to-desktop {
+        margin-right: 30px;
+    }
+}
+.trips-description__img {
+    height: 49vw;
+    min-height: 206px;
+    margin-bottom: 30px;
+    @include to-desktop {
+        width: 583px;
+        height: 300px;
+        margin-bottom: 0;
+    }
+}
+.trips-description__content {
+    max-width: 417px;
+}
+.trips-description:nth-child(2) .trips-description__content {
+    @include to-desktop {
+        max-width: 260px;
+    }
+}
+.trips-description:nth-child(3) .trips-description__content {
+    @include to-desktop {
+        max-width: 363px;
+    }
+}
+.trips-description__title {
+    max-width: 417px;
+    margin-bottom: 20px;
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-large-semi);
+    line-height: var(--line-height);
+}
+.trips-description__text {
+    font-size: var(--font-size-medium);
+    @include to-desktop {
+        font-size: var(--font-size-medium-maxi);
+        font-weight: 600;
+        max-width: 360px;
+    }
+}
+.trips-description:nth-child(1)::before {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        width: 263px;
+        height: 200px;
+        bottom: -37px;
+        left: 81%;
+        background: url(/img/svg/trips-path_01.svg) center / cover no-repeat;
+        transform: translateX(-50%) rotate(-122deg);
+    }
+    @include to-desktop {
+        width: 191px;
+        height: 147px;
+        bottom: -166px;
+        left: 38%;
+        transform: translateX(-50%) rotate(2deg);
+    }
+    @include from-desktop {
+        width: 241px;
+        height: 185px;
+        bottom: -203px;
+    }
+}
+.trips-description:nth-child(2)::before {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        width: 179px;
+        height: 220px;
+        bottom: -85px;
+        left: 14%;
+        background: url(/img/svg/trips-path_02.svg) center / cover no-repeat;
+        transform: translateX(-50%) rotate(-48deg);
+    }
+    @include to-desktop {
+        width: 122px;
+        height: 147px;
+        bottom: -166px;
+        left: 60%;
+        transform: translateX(-50%) rotate(2deg);
+    }
+    @include from-desktop {
+        width: 149px;
+        height: 185px;
+        bottom: -203px;
+        left: 68%;
+    }
+}

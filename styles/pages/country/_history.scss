@@ -1,0 +1,104 @@
+.history {
+    padding: 30px 0;
+    color: var(--white);
+    @include to-desktop {
+        padding: 45px 0 55px;
+    }
+}
+.history__wrap {
+    @include to-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.history-top__item {
+    display: flex;
+    flex-direction: column;
+}
+.history__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    @include from-mobile {
+        font-size: 48px;
+    }
+    @include to-desktop {
+        margin-top: 20px;
+        order: 2;
+        font-size: 55px;
+    }
+    @include from-desktop {
+        font-size: 72px;
+    }
+}
+.history-bottom__wrap {
+    @include to-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.history-top {
+    @include to-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-bottom: 24px;
+    }
+}
+.history-bottom__text {
+    margin: 20px 0;
+    @include to-desktop {
+        width: 46.5%;
+        margin: 16px 0 0 0;
+    }
+}
+.history-top__image {
+    height: 341px;
+    @include from-mobile {
+        max-width: 502px;
+    }
+    @include to-desktop {
+        height: 341px;
+        width: 46.5%;
+        max-width: none;
+    }
+}
+.history-bottom__image {
+    width: 100%;
+    height: 187px;
+    max-width: 502px;
+    @include to-mobile {
+        height: 238px;
+    }
+    @include from-mobile {
+        height: 262px;
+    }
+    @include to-desktop {
+        width: 49.2%;
+        max-width: none;
+    }
+}
+.history-top__inner {
+    @include to-desktop {
+        width: 47%;
+    }
+}
+.history-top-inner__image {
+    display: none;
+    @include to-desktop {
+        display: block;
+        height: 183px;
+        width: 100%;
+        max-width: 370px;
+        margin: 0 auto;
+    }
+}
+.page-fa .history-top__image,
+.page-fa .history-bottom__image {
+    margin-left: auto;
+    @include to-desktop {
+        margin: 0;
+    }
+}

@@ -1,0 +1,46 @@
+.awards-2016 {
+    padding: 0 0 60px 0;
+    color: var(--white);
+    @include to-desktop {
+        padding: 0 0 80px 0;
+    }
+}
+.awards-2016__title {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    @include from-mobile {
+        margin-bottom: 30px;
+    }
+    @include to-desktop {
+        margin-bottom: 40px;
+    }
+}
+.awards-2016 .image-under-text {
+        position: absolute;
+        display: block;
+        top: 25%;
+        left: 1%;
+        width: 98%;
+        height: 239px;
+        z-index: 0;
+        opacity: 0.2;
+        @include to-mobile {
+            top: 1%;
+        }
+        @include from-mobile {
+            top: 15%;
+        }
+}
+.awards-2016 .image-under-text__tetx {
+    font-family : var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: 283px;
+    text-transform: uppercase;
+}
+.awards-2016-slider {
+    padding-top: 20px;
+    @include to-desktop {
+        padding-top: 30px;
+    }
+}

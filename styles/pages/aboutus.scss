@@ -1,0 +1,54 @@
+@import '../setup/mixins';
+@import '../setup/variables';
+
+@import 'styles/pages/aboutus/hero';
+@import 'styles/pages/aboutus/benefit';
+@import 'styles/pages/aboutus/why';
+@import 'styles/pages/aboutus/awards-2016';
+@import 'styles/pages/aboutus/awards-2014';
+@import 'styles/pages/aboutus/awards-2011';
+@import 'styles/pages/aboutus/awards-2009';
+@import 'styles/pages/aboutus/awards-2008';
+@import 'styles/pages/aboutus/comment';
+@import 'styles/common/components/g-slider';
+@import 'styles/common/components/get-more';
+@import 'styles/common/components/projects';
+@import 'styles/common/components/view-tour';
+
+// ----------------------------------------
+.awards-list {
+    color: var(--white);
+}
+.awards-list__subtitle {
+    margin-bottom: 20px;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    font-size: 24px;
+    line-height: var(--line-height);
+}
+.awards-list__item {
+    position: relative;
+    padding-left: 27px;
+    font-weight: var(--font-weight-semi-bold);
+    & + & {
+        margin-top: 5px;
+    }
+}
+.awards-list__item::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 9px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+.page-fa .awards-list__item.lang-fa {
+    padding-left: 0;
+    padding-right: 27px;
+}
+.page-fa .awards-list__item::before {
+    left: 0;
+    right: 9px;
+}

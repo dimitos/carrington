@@ -1,0 +1,72 @@
+.page_404 .header,
+.page_404 .menu,
+.page_404 .footer,
+.page_415 .header,
+.page_415 .menu,
+.page_415 .footer {
+    display: none;
+}
+.page_404 .page__body,
+.page_415 .page__body,
+.page_404 .page__main,
+.page_415 .page__main {
+    height: 100%;
+}
+.error {
+    position: relative;
+    width: 100%;
+    height: 101%;
+    font-size: 2.7px;
+    color: var(--white);
+    text-transform: uppercase;
+    @include to-mobile {
+        width: 101vw;
+        height: 101vh;
+        font-size: 0.9vw;
+    }
+    @include to-desktop {
+        font-size: 0.7vw;
+    }
+    @include from-desktop {
+        font-size: 10px;
+    }
+}
+.error__content  {
+    position: absolute;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+.error-01__image {
+    z-index: 1;
+}
+.error-02__image {
+    z-index: 3;
+}
+.error__code {
+    top: 33%;
+    z-index: 2;
+    font-size: 40.3em;
+}
+.error__text {
+    top: 71%;
+    z-index: 4;
+    font-size: 6.1em;
+    font-weight: var(--font-weight-semi-bold);
+    @include to-desktop {
+        top: 56%;
+    }
+}
+@media (orientation: portrait) {
+    .error__code {
+        top: 37%;
+        font-size: 51.6em;
+    }
+    .error__text {
+        top: 53%;
+        font-size: 7.2em;
+        @include to-desktop {
+            top: 56%;
+        }
+    }
+}
